@@ -165,7 +165,7 @@ export default function HomeDashboard() {
             <Zap className="w-5 h-5 text-brand-600" />
             <span>Quick Actions</span>
           </h2>
-          <span className="text-xs text-slate-500 dark:text-slate-400">SIH 25094 Advisor Modules</span>
+          <span className="text-xs text-slate-500 dark:text-slate-400">SIH1781 Advisor Modules</span>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
