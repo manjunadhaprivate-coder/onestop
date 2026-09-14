@@ -145,7 +145,7 @@ export default function OnboardingPage() {
           </div>
 
           <div className="mt-6 flex items-center justify-center gap-2 text-[11px] text-slate-400">
-            <span>Problem Statement: SIH SIH1781</span>
+            <span>Problem Statement: SIH 1781</span>
             <span>•</span>
             <span>Smart Education</span>
           </div>
@@ -310,7 +310,7 @@ export default function OnboardingPage() {
             </h3>
             <div className="text-xs text-slate-600 dark:text-slate-400 space-y-2.5 my-4 max-h-60 overflow-y-auto pr-2 leading-relaxed">
               <p>
-                <strong>1. Prototype Disclaimer:</strong> One-Stop is an AI-guided student advisory prototype developed for Smart India Hackathon 2025 (Problem Statement SIH SIH1781).
+                <strong>1. Prototype Disclaimer:</strong> One-Stop is an AI-guided student advisory prototype developed for Smart India Hackathon 2025 (Problem Statement SIH 1781).
               </p>
               <p>
                 <strong>2. Advisory Recommendations:</strong> College cutoffs, salary figures, and admission procedures are compiled from public educational records and represent guidance, not guarantees.

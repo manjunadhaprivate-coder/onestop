@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 border border-brand-200 dark:border-brand-800 text-[11px] font-semibold text-brand-700 dark:text-brand-300">
               <span>SIH 2025</span>
               <span>•</span>
-              <span>ID: SIH SIH1781</span>
+              <span>ID: SIH 1781</span>
             </div>
           </div>
 

@@ -188,7 +188,7 @@ export default function SettingsPage() {
             </h3>
             <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 inline-flex items-center gap-1 w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse"></span>
-              Operational • SIH SIH1781
+              Operational • SIH 1781
             </span>
           </div>
 
@@ -343,7 +343,7 @@ export default function SettingsPage() {
             <span>Smart India Hackathon 2025 Information</span>
           </div>
           <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-            <strong>Problem Statement ID:</strong> SIH SIH1781 <br />
+            <strong>Problem Statement ID:</strong> SIH 1781 <br />
             <strong>Problem Title:</strong> One-Stop Personalized Career & Education Advisor <br />
             <strong>Theme:</strong> Smart Education <br />
             <strong>Application:</strong> One-Stop ("Your Future. One Step Ahead.")

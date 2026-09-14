@@ -2,7 +2,7 @@
 ### *"Your Future. One Step Ahead."*
 
 **Smart India Hackathon 2025**
-- **Problem Statement ID:** SIH SIH1781
+- **Problem Statement ID:** SIH 1781
 - **Problem Statement Title:** One-Stop Personalized Career & Education Advisor
 - **Theme:** Smart Education
 - **Deliverable:** Fully functional, modern web application prototype with offline intelligence and local fallbacks.

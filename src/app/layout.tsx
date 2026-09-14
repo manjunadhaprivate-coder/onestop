@@ -7,7 +7,7 @@ import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
   title: 'One-Stop – Personalized Career & Education Advisor',
-  description: 'Smart India Hackathon 2025 (SIH SIH1781): One-Stop Personalized Career & Education Advisor for Indian Students.',
+  description: 'Smart India Hackathon 2025 (SIH 1781): One-Stop Personalized Career & Education Advisor for Indian Students.',
 };
 
 export default function RootLayout({

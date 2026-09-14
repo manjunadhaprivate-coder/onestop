@@ -48,6 +48,6 @@ export async function GET() {
       tokenTransmission: 'Never transmitted / Omitted by design',
       deduplicationEnabled: true
     },
-    sihStatementId: 'SIH SIH1781'
+    sihStatementId: 'SIH 1781'
   });
 }
