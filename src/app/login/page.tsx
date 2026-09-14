@@ -105,7 +105,7 @@ export default function LoginPage() {
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800 text-[11px] font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5 text-brand-600" />
-            <span>Smart India Hackathon • SIH 25094</span>
+            <span>Smart India Hackathon • SIH SIH1781</span>
           </div>
 
           <div className="relative mx-auto w-16 h-16 mb-3">

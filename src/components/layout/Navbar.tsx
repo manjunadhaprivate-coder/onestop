@@ -67,7 +67,7 @@ export default function Navbar() {
               <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-brand-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 One-Stop
               </span>
-              <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">SIH 25094 • Smart Education</p>
+              <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">SIH SIH1781 • Smart Education</p>
             </div>
           </Link>
           <div className="flex items-center gap-2">

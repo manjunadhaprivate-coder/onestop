@@ -1,4 +1,4 @@
-// Prisma schema for One-Stop - SIH 25094
+// Prisma schema for One-Stop - SIH SIH1781
 // To use MySQL: Set provider = "mysql" and DATABASE_URL in .env
 // Defaults to sqlite for immediate, self-contained local testing without database server setup.
 
