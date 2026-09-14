@@ -1,0 +1,142 @@
+// Prisma schema for One-Stop - SIH 25094
+// To use MySQL: Set provider = "mysql" and DATABASE_URL in .env
+// Defaults to sqlite for immediate, self-contained local testing without database server setup.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite" // Change to "mysql" when connecting to MySQL server
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(cuid())
+  email        String        @unique
+  fullName     String
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  profile      Profile?
+  savedCareers SavedCareer[]
+  savedColleges SavedCollege[]
+  taskProgress TaskProgress[]
+}
+
+model Profile {
+  id                    String   @id @default(cuid())
+  userId                String   @unique
+  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  age                   Int
+  educationLevel        String   // Class 10, Class 12, Undergraduate, Graduate
+  stream                String   // PCM, PCB, Commerce, Arts, Computer Science
+  academicScore         Float    // Percentage
+  academicInterests     String   // JSON string of array
+  favoriteSubjects      String   // JSON string of array
+  skills                String   // JSON string of array
+  careerInterests       String   // JSON string of array
+  preferredLocation     String   // JSON string of array
+  govtCollegePreference String
+  budgetPreference      String
+  bio                   String?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model Career {
+  id               String        @id
+  title            String
+  category         String
+  stream           String        // JSON array
+  educationLevel   String        // JSON array
+  shortDescription String
+  overview         String
+  whyChoose        String        // JSON array
+  requiredEducation String       // JSON array
+  requiredSkills   String        // JSON array
+  popularExams     String        // JSON array
+  salaryEntry      String
+  salaryMid        String
+  salarySenior     String
+  growthDemand     String
+  growthPercentage String
+  suitableProfile  String
+  topRecruiters    String        // JSON array
+  dayInTheLife     String
+  iconName         String
+  isTrending       Boolean       @default(false)
+  createdAt        DateTime      @default(now())
+  savedBy          SavedCareer[]
+}
+
+model Course {
+  id                    String   @id
+  name                  String
+  category              String
+  duration              String
+  eligibility           String
+  suitableStreams       String   // JSON array
+  overview              String
+  keySubjects           String   // JSON array
+  topEntranceExams      String   // JSON array
+  averageFeesGovt       String
+  averageFeesPrivate    String
+  careerOutcomes        String   // JSON array
+  higherStudies         String   // JSON array
+  averageStartingSalary String
+  rating                Float    @default(4.5)
+}
+
+model College {
+  id                    String         @id
+  name                  String
+  shortName             String
+  city                  String
+  state                 String
+  type                  String
+  established           Int
+  nirfRank              Int?
+  overview              String
+  availableCourses      String         // JSON array
+  eligibilitySummary    String
+  admissionMode         String
+  feeStructureSummary   String
+  officialWebsite       String
+  campusHighlights      String         // JSON array
+  scholarshipAvailable  Boolean        @default(true)
+  placementHighlights   String
+  savedBy               SavedCollege[]
+}
+
+model SavedCareer {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  careerId  String
+  career    Career   @relation(fields: [careerId], references: [id], onDelete: Cascade)
+  savedAt   DateTime @default(now())
+
+  @@unique([userId, careerId])
+}
+
+model SavedCollege {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  collegeId String
+  college   College  @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+  savedAt   DateTime @default(now())
+
+  @@unique([userId, collegeId])
+}
+
+model TaskProgress {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  taskId      String
+  isCompleted Boolean  @default(false)
+  completedAt DateTime?
+
+  @@unique([userId, taskId])
+}
